@@ -1,17 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Card from "./CardsInfo"
+import Header from "./Header"
+import Collapse from "./Collapse"
 
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <div className="container">
+        <div className="row">
+          <div className="card-group" >
+            <div className="col" >
+              <Collapse href="itemTest1">
+                <Card title="Resurrection" desc="Bu 1. Şarkı" image="https://picsum.photos/id/1/200/200" />
+              </Collapse>
+            </div>
+            <div className="col">
+              <Collapse href="itemTest2">
+                <Card title="Jack The Ripper" desc="Bu 2. Şarkı" image="https://picsum.photos/id/12/200/200" />
+              </Collapse>
+            </div>
+            <div className="col">
+              <Collapse href="itemTest3">
+                <Card title="Freak Show" desc="Bu 3. Şarkı" image="https://picsum.photos/id/1002/200/200" />
+              </Collapse>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+  )
+}
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
